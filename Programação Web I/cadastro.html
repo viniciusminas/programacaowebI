@@ -1,31 +1,53 @@
 <!DOCTYPE html>
- <html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Primeiro código executado em Programação WEB I">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="Cadastro, Formulário, HTML">
     <meta name="author" content="Vinícius Antonio Minas">
-    <title>CADASTRO SIMPLES DE PESSOAS</title>
+    <title>Cadastro Simples de Pessoas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<form>
-    <fieldset>
-      <legend>CADASTRO SIMPLES DE PESSOAS</legend>
-      <p>
-        <input type="nome" name="size" id="size_1" value="vinicius" />
-        <label for="size_1">INSIRA AQUI</label>
-      </p>
-      <p>
-        <input type="telefone" name="size" id="size_2" value="telefone" />
-        <label for="size_2">INSIRA AQUI</label>
-      </p>
-      <p>
-        <input type="radio" name="size" id="size_3" value="large" />
-        <label for="size_3">Large</label>
-      </p>
-    </fieldset>
-  </form>
-  
+<body>
+
+    <form>
+        <fieldset>
+            <legend>Cadastro Simples de Pessoas</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required />
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone" placeholder="Digite seu telefone" required />
+
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required />
+
+            <label for="tipo_pessoa">Tipo Pessoa:</label>
+            <select name="tipo_pessoa" id="tipo_pessoa">
+                <option value="fisica">Física</option>
+                <option value="juridica">Jurídica</option>
+            </select>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço" required />
+
+            <label for="uf">UF (Estado):</label>
+            <select name="uf" id="uf">
+                <option value="SP">SP</option>
+                <option value="RJ">RJ</option>
+                <option value="MG">MG</option>
+                <option value="ES">ES</option>
+                <option value="SC">SC</option>
+                <option value="PR">PR</option>
+            </select>
+        </fieldset>
+
+        <input type="submit" value="Enviar" />
+    </form>
+
+</body>
 
 </html>
