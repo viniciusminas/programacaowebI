@@ -5,90 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Vinícius Antonio Minas">
     <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <form action="/cadastro.php"  method="post">
+        <fieldset>
+            <legend>Cadastro de Pessoas</legend>
+            <ul>
+                <div class="cont1">
+                    <li>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" title="Nome" required maxlength="100"><br>
+                    </li>
+                       
+                    <li>
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" title="Sobrenome" required maxlength="100"><br>
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" title="Email" required><br>
+                    </li>
+                </div>
 
-<h2>Cadastro de Pessoa</h2>
-
-<form action="cadastro.php" method="POST">
-    <fieldset>
-        <legend>Informações Pessoais</legend>
-        <ul>
-            <li>
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome" name="nome" required maxlength="100">
-            </li>
-            <li>
-                <label for="sobrenome">Sobrenome:</label><br>
-                <input type="text" id="sobrenome" name="sobrenome" required maxlength="100">
-            </li>
-            <li>
-                <label for="email">E-Mail:</label><br>
-                <input type="email" id="email" name="email" required>
-            </li>
-            <li>
-                <label for="data_nascimento">Data de Nascimento:</label><br>
-                <input type="date" id="data_nascimento" name="data_nascimento" min="1920-01-01" max="2024-01-01">
-            </li>
-            <li>
-                <label>Sexo:</label><br>
-                <input type="radio" id="masculino" name="sexo" value="masculino">
-                <label for="masculino">Masculino</label><br>
-                <input type="radio" id="feminino" name="sexo" value="feminino">
-                <label for="feminino">Feminino</label>
-            </li>
-            <li>
-                <label for="endereco">Endereço:</label><br>
-                <input type="text" id="endereco" name="endereco" maxlength="200">
-            </li>
-            <li>
-                <label for="cep">CEP:</label><br>
-                <input type="text" id="cep" name="cep" maxlength="10">
-            </li>
-            <li>
-                <label for="cor_favorita">Cor favorita:</label><br>
-                <input type="color" id="cor_favorita" name="cor_favorita">
-            </li>
-            <li>
-                <label for="estado">Estado (UF):</label><br>
-                <select id="estado" name="estado">
-                    <option value="AC">Acre (AC)</option>
-                    <option value="AL">Alagoas (AL)</option>
-                    <option value="AP">Amapá (AP)</option>
-                    <option value="AM">Amazonas (AM)</option>
-                    <option value="BA">Bahia (BA)</option>
-                    <option value="CE">Ceará (CE)</option>
-                    <option value="DF">Distrito Federal (DF)</option>
-                    <option value="ES">Espírito Santo (ES)</option>
-                    <option value="GO">Goiás (GO)</option>
-                    <option value="MA">Maranhão (MA)</option>
-                    <option value="MT">Mato Grosso (MT)</option>
-                    <option value="MS">Mato Grosso do Sul (MS)</option>
-                    <option value="MG">Minas Gerais (MG)</option>
-                    <option value="PA">Pará (PA)</option>
-                    <option value="PB">Paraíba (PB)</option>
-                    <option value="PR">Paraná (PR)</option>
-                    <option value="PE">Pernambuco (PE)</option>
-                    <option value="PI">Piauí (PI)</option>
-                    <option value="RJ">Rio de Janeiro (RJ)</option>
-                    <option value="RN">Rio Grande do Norte (RN)</option>
-                    <option value="RS">Rio Grande do Sul (RS)</option>
-                    <option value="RO">Rondônia (RO)</option>
-                    <option value="RR">Roraima (RR)</option>
-                    <option value="SC">Santa Catarina (SC)</option>
-                    <option value="SP">São Paulo (SP)</option>
-                    <option value="SE">Sergipe (SE)</option>
-                    <option value="TO">Tocantins (TO)</option>
-                </select>
-            </li>
-        </ul>
-    </fieldset>
+                <div class="cont2">
+                    <li>
+                        <label for="data_nasc">Data de Nascimento</label>
+                        <input type="date" id="data_nasc" name="data_nasc" title="Data de Nascimento" datemin="01/01/1920" datemax="01/01/2024"><br>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" id="sexo" name="sexo" value="homem">Homem
+                        </label>
+                    
+                        <label>
+                            <input type="radio" id="sexo" name="sexo" value="mulher">Mulher
+                        </label><br>
+                    </li>
+                </div>
+                
+                <div class="cont3">
+                    <li>
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco" title="Endereço" maxlength="200"><br>
+                    </li>
+                    
+                    <li>
+                        <label for="CEP">Cep:</label>
+                        <input type="text" id="cep" name="cep" maxlength="10"><br>
+                    </li>
     
-    <br>
-    
-    <input type="submit" value="Enviar">
-    <input type="reset" value="Resetar">
-</form>
+                    <li>
+                        <label for="estado">Estado (UF):</label><br>
+                        <select id="estado" name="estado">
+                           <option value="AC">Acre (AC)</option>
+                           <option value="AL">Alagoas (AL)</option>
+                           <option value="AP">Amapá (AP)</option>
+                           <option value="AM">Amazonas (AM)</option>
+                           <option value="BA">Bahia (BA)</option>
+                           <option value="CE">Ceará (CE)</option>
+                           <option value="DF">Distrito Federal (DF)</option>
+                           <option value="ES">Espírito Santo (ES)</option>
+                           <option value="GO">Goiás (GO)</option>
+                           <option value="MA">Maranhão (MA)</option>
+                           <option value="MT">Mato Grosso (MT)</option>
+                           <option value="MS">Mato Grosso do Sul (MS)</option>
+                           <option value="MG">Minas Gerais (MG)</option>
+                           <option value="PA">Pará (PA)</option>
+                           <option value="PB">Paraíba (PB)</option>
+                           <option value="PR">Paraná (PR)</option>
+                           <option value="PE">Pernambuco (PE)</option>
+                           <option value="PI">Piauí (PI)</option>
+                           <option value="RJ">Rio de Janeiro (RJ)</option>
+                           <option value="RN">Rio Grande do Norte (RN)</option>
+                           <option value="RS">Rio Grande do Sul (RS)</option>
+                           <option value="RO">Rondônia (RO)</option>
+                           <option value="RR">Roraima (RR)</option>
+                           <option value="SC">Santa Catarina (SC)</option>
+                           <option value="SP">São Paulo (SP)</option>
+                           <option value="SE">Sergipe (SE)</option>
+                           <option value="TO">Tocantins (TO)</option>
+                        </select>
+                    </li>
+                </div>
 
+            </ul>
+     
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Apagar">
+        </fieldset>
+    </form>
+  
 </body>
 </html>
