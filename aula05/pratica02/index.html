@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Vinícius Antonio Minas">
     <title>Tabela de Notas dos Alunos</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse; 
-        }
-        th, td {
-            border: 1px solid black;
-            text-align: center;
-            padding: 8px;
-        }
-        th {
-            background-color: #d3d3d3;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
 <h2>Notas dos Alunos</h2>
+
+<div class="button-container">
+    <button onclick="adcTotalLinha()">Média das Notas</button>
+    <button onclick="adcTotalColuna()">Média por Aluno</button>
+</div>
 
 <table>
     <tr>
@@ -43,78 +36,79 @@
         <th>Nota 3</th>
     </tr>
     <tr>
-        <td>João</td>
+        <td>Pedro</td>
+        <td>10</td>
+        <td>7,5</td>
+        <td>6,9</td>
+        <td>9,8</td>
+        <td>8,7</td>
+        <td>8,9</td>
+        <td>10</td>
+        <td>9,5</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Vini</td>
+        <td>10</td>
+        <td>10</td>
+        <td>9,5</td>
+        <td>10</td>
+        <td>8,9</td>
+        <td>9,3</td>
+        <td>10</td>
+        <td>9,5</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Graci</td>
+        <td>8,8</td>
+        <td>9,8</td>
+        <td>6,5</td>
         <td>10</td>
         <td>8</td>
-        <td>9</td>
-        <td>6</td>
+        <td>9,8</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Vitor</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+        <td>9,5</td>
+        <td>7,9</td>
         <td>8,7</td>
         <td>10</td>
-        <td>6</td>
-        <td>7</td>
+        <td>10</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>André</td>
+        <td>7,1</td>
+        <td>9,8</td>
+        <td>5,4</td>
+        <td>4,5</td>
+        <td>3,5</td>
+        <td>10</td>
+        <td>9,4</td>
         <td>9</td>
+        <td>10</td>
     </tr>
     <tr>
-        <td>Maria</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>José</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Paulo</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Miguel</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Julia</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Rafa</td>
+        <td>9,7</td>
+        <td>10</td>
+        <td>9,5</td>
+        <td>9,1</td>
+        <td>10</td>
+        <td>10</td>
+        <td>9,8</td>
+        <td>9,9</td>
+        <td>10</td>
     </tr>
 </table>
 
+<script src="script.js"></script>
 </body>
 </html>
