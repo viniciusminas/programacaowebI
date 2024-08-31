@@ -2,7 +2,7 @@ function adcTotalLinha() {
     var tabela = document.querySelector("table");
 
     if (tabela.rows[tabela.rows.length - 1].cells[0].innerHTML === "Média") {
-        alert("A linha total já foi adicionada!");
+        alert("A linha já foi adicionada!");
         return;
     }
     
@@ -35,7 +35,7 @@ function adcTotalColuna() {
     var tabela = document.querySelector("table");
 
     if (tabela.rows[0].cells[tabela.rows[0].cells.length - 1].innerHTML === "Média") {
-        alert("A coluna total já foi adicionada!");
+        alert("A coluna já foi adicionada!");
         return;
     }
 
