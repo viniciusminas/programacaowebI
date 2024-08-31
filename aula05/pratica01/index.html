@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Vinícius Antonio Minas">
+    <meta name="author" content="Vinícius Minas">
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Calculadora</h1>
     <div class="calculadora">
-        <h1>Calculadora</h1>
-        <input type="number" id="num1" placeholder="Número 1">
-        <input type="number" id="num2" placeholder="Número 2">
-
+        <input type="text" id="num1" placeholder="Digite um número">
+        <input type="text" id="num2" placeholder="Digite outro número">
         <div class="buttons">
-            <button onclick="calcular('+')">+</button>
-            <button onclick="calcular('-')">-</button>
-            <button onclick="calcular('*')">*</button>
-            <button onclick="calcular('/')">/</button>
+            <button onclick="somar()">Somar</button>
+            <button onclick="dividir()">Dividir</button>
+            <button onclick="multiplicar()">Multiplicar</button>
+            <button onclick="subtrair()">Subtrair</button>
         </div>
-
-        <input type="text" id="resultado" readonly placeholder="Resultado">
+        <p id="resultado">Resultado: </p>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

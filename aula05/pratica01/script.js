@@ -1,38 +1,43 @@
-function calcular(operation) {
-    const num1 = parseFloat(document.getElementById('num1').value);
-    const num2 = parseFloat(document.getElementById('num2').value);
-    let resultado = 0;
+function somar() {
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let resultado = num1 + num2;
+    mostrarResultado(resultado);
+}
 
-    switch(operation) {
-        case '+':
-            resultado = num1 + num2;
-            break;
-        case '-':
-            resultado = num1 - num2;
-            break;
-        case '*':
-            resultado = num1 * num2;
-            break;
-        case '/':
-            if (num2 === 0) {
-                alert("Divisão por zero não é permitida.");
-                return;
-            }
-            resultado = num1 / num2;
-            break;
-        default:
-            alert("Operação inválida.");
-            return;
+function subtrair() {
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let resultado = num1 - num2;
+    mostrarResultado(resultado);
+}
+
+function multiplicar() {
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let resultado = num1 * num2;
+    mostrarResultado(resultado);
+}
+
+function dividir() {
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let resultado = num1 / num2;
+        mostrarResultado(resultado);
     }
 
-    const resultField = document.getElementById('resultado');
-    resultField.value = resultado;
+
+function mostrarResultado(resultado) {
+    let resultadoElemento = document.getElementById("resultado");
+    resultadoElemento.innerText = "Resultado " + resultado;
 
     if (resultado > 0) {
-        resultField.style.backgroundColor = 'green';
+        resultadoElemento.className = "resultado-positivo";
     } else if (resultado < 0) {
-        resultField.style.backgroundColor = 'red';
-    } else {
-        resultField.style.backgroundColor = 'gray';
+        resultadoElemento.className = "resultado-negativo";
     }
+    else {
+        resultadoElemento.className = "resultado-zero";
+    }
+
 }
