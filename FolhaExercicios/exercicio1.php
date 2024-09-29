@@ -1,8 +1,3 @@
-/*Criar um programa que execute a soma de três valores.
-Se a primeira variável for maior que 10, escrever o resultado da operação em azul
-Se a segunda variável for menor que a terceira, escrever o resultado em verde
-Se a terceira variável for menor que a primeira e a segunda variável escrever o
-resultado em vermelho*/
 <!DOCTYPE html>
 <html lang = "PT-BR">
 <head>
@@ -18,7 +13,6 @@ resultado em vermelho*/
 <body>
     <h1>Somando Valores</h1>
 
-    <!--Formulário - Input de Dados -->
     <form action="" method="post">
         <label for="valor1">Valor 1</label>
         <input type="number" id="valor1" name="valor1">
@@ -33,7 +27,6 @@ resultado em vermelho*/
     </form>
 
 <?php
-    //verificar os valores enviados
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $n1 = $_POST['valor1'];
     $n2 = $_POST['valor2'];
